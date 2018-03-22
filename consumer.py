@@ -20,7 +20,7 @@ def ws_connect(msg):
 
     bridge.open(**request_kwargs)
 
-
+# 记录浏览器输入内容
 def ws_receive(msg):
     data = msg.content['text']
     Proxy.session[msg.reply_channel.name].web_to_terminal(data)
